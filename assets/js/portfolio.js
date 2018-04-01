@@ -68,6 +68,8 @@ var projects = {
             newImg.setAttribute("id", "projectImage");
             newImg.setAttribute("src", this.details[i].image);
             newImg.setAttribute("alt", this.details[i].name + " image");
+            newImg.setAttribute("data-id", i);
+            newImg.addEventListener("click", this.modalDisplay);
             
             
             var textDiv = document.createElement("div");
@@ -76,7 +78,7 @@ var projects = {
             newDiv.appendChild(indexDiv);
             newDiv.appendChild(newImg);
             newDiv.appendChild(textDiv);
-            document.getElementById("projects").appendChild(newDiv);
+            document.getElementById("display-project").appendChild(newDiv);
 
             var createDot = document.createElement("span");
             createDot.setAttribute("class", "dot");
@@ -84,11 +86,41 @@ var projects = {
             document.getElementById("addDot").appendChild(createDot);
 
         }
+
+    },
+    modalDisplay: function() {
+        var modal = document.getElementById("projectModal");
+        var header = document.getElementById("projectName");
+        var span = document.getElementById("close");
+        var project = projects.details[this.dataset.id];
+        modal.style.display = "block";
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function() {
+            if(event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        document.getElementById("projectName").innerHTML = project.name;
+        document.getElementById("description-area").innerHTML = project.description;
+        var githubButton = document.createElement("button");
+        githubButton.setAttribute("id", "githubButton");
+        githubButton.setAttribute("onClick", "window.open('" + project.githubLink + "', '_blank')");
+        githubButton.innerHTML = "Github Code";
+        var demoButton = document.createElement("button");
+        demoButton.setAttribute("id", "demoButton");
+        demoButton.setAttribute("onClick", "window.open('" + project.demoLink + "', '_blank')");
+        demoButton.innerHTML = "Demo";
+        document.getElementById("button-area").innerHTML = "";
+        document.getElementById("button-area").appendChild(githubButton);
+        document.getElementById("button-area").appendChild(demoButton);
+        
     }
 }
 
 projects.slideshowCreator();
-
+// document.getElementById("projectImage").addEventListener("click", projects.modalDisplay);
 var slideIndex = 1;
 showSlides(slideIndex);
 

@@ -23,7 +23,7 @@
     </div>
     <div class="offset-body">
       <div class="welcome-sign">
-          <h1 id="animate">Welcome to Mitchell Ramsey's<br/>Web Development Portfolio</h1>
+          <h1 id="animate">Mitchell Ramsey's<br/>Web Development Portfolio</h1>
       </div>
       <div id="about-me">
             <h2>About Me</h2>
@@ -58,20 +58,36 @@
       <div id="projects">
           <h2>Projects</h2>
           <hr>
-          <div class="slideshow-container">
+          <div class="slideshow-container" id="display-project">
 
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
           </div>
           <br>
-          <div id="addDot" style="text-align:center">
->
+          <div id="addDot">
+
           </div>
 
 
       </div>
     </div>
+    <div id="projectModal" class="modal">
+        <header id="modal-title"><span id="projectName"></span><span id="close">&times;</span></header>
+         <div class="modal-content">
+            <div id="description-area">
+    
+            </div>
+             <hr>
+            <div id="button-area">
+    
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="assets/js/portfolio.js"></script>
+ 
+    
+  
+
 </body>
 </html>
