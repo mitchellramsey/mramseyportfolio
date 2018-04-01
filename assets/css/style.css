@@ -85,7 +85,7 @@ a:hover {
     to{opacity: 1}
 }
 
-#about-me, #projects {
+#about-me, #projects, #contact-me {
     font-family: 'Slabo 27px', serif;
     font-size: 16pt;
     margin: 20px auto;
@@ -262,10 +262,15 @@ img {
     cursor: pointer;
 }
 
-#demoButton, #githubButton {
+#demoButton, #githubButton, #submit {
     padding: 10px;
     margin: 5px 25px 5px;
     background-color: #000;
     color: #b3b3ff;
     border-radius: 15px;
+}
+
+#input {
+    /* height: 15px; */
+    font-size: 14pt;
 }
