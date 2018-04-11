@@ -39,23 +39,23 @@ body {
    
 }
 
-a {
+.pageLinks {
     float: right;
     margin: 20px 10px;
     padding: 0px 10px;
 }
 
-a:link {
+.pageLinks:link {
     text-decoration: none;
     color: #b3b3ff;
 }
 
-a:visited {
+.pageLinks:visited {
     text-decoration: none;
     color: #b3b3ff;
 }
 
-a:hover {
+.pageLinks:hover {
     color: #000;
     background-color: #b3b3ff;
 }
@@ -66,6 +66,29 @@ a:hover {
     top: 100px;
     margin: auto;
     width: 1000px;
+}
+
+#footer {
+    position: relative;
+    bottom: -100px;
+    left: 0;
+    text-align: center;
+    height: 120px;
+    background-color: #b3b3ff;
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14pt;
+    
+}
+
+.icon {
+    width: 60px;
+    margin: 0;
+}
+
+.bigicon {
+    width: 58px;
+    margin: 0;
 }
 
 .welcome-sign {

@@ -16,9 +16,9 @@
             <h1>Mitchell Ramsey</h1>
         </div>
         <div class="nav-links">
-                <h3><a href="#about-me">About Me</a></h3>
-                <h3><a href="#projects">Projects</a></h3>
-                <h3><a href="#contact-me">Contact Me</a></h3>
+                <h3><a class="pageLinks" href="#about-me">About Me</a></h3>
+                <h3><a class="pageLinks" href="#projects">Projects</a></h3>
+                <h3><a class="pageLinks" href="#contact-me">Contact Me</a></h3>
         </div>
     </div>
     <div class="offset-body">
@@ -74,24 +74,24 @@
       <div id="contact-me">
           <h2>Contact Me</h2>
           <hr>
-          <form name="htmlform">
+          <form name="htmlform" method="POST" action="send">
                 <table width="450px">
                 </tr>
                 <tr>
                  <td>
-                  <label for="first_name">First Name:</label>
+                  <label for="first_name">Name:</label>
                  </td>
                  <td>
-                  <input  id="input" type="text" name="first_name" maxlength="50" size="50">
+                  <input  id="input" type="text" name="name" maxlength="50" size="50">
                  </td>
                 </tr>
                  
                 <tr>
                  <td>
-                  <label for="last_name">Last Name:</label>
+                  <label for="last_name">Company:</label>
                  </td>
                  <td>
-                  <input id="input"  type="text" name="last_name" maxlength="50" size="50">
+                  <input id="input"  type="text" name="company" maxlength="50" size="50">
                  </td>
                 </tr>
                 <tr>
@@ -122,13 +122,24 @@
                 </tr>
                 <tr>
                  <td colspan="10" style="text-align:center">
-                  <input id="submit" type="submit" value="Submit">   
+                  <button id="submit" type="submit">Submit</button>   
                  </td>
                 </tr>
                 </table>
                 </form>
       </div>
+
     </div>
+    <div id="footer">
+        <div id="icons">
+            <a href="https://github.com/mramsey1992" target="_blank"><img class="icon" src="assets/images/github.png" alt="link to github profile"></a>
+            <a href="https://www.linkedin.com/in/mitchell-ramsey-404b1a126/" target="_blank"><img class="icon" src="assets/images/linkedin.png" alt="link to linkedin profile"></a>
+            <a href="https://stackoverflow.com/users/8916873/mramsey1992" target="_blank"><img class="bigicon" src="assets/images/stackoverflow.png" alt="link to stackoverflow profile"></a>
+            <hr>
+            &copyCopyright 2017 Mitchell Ramsey
+        </div>
+    </div>
+    
     <div id="projectModal" class="modal">
         <header id="modal-title"><span id="projectName"></span><span id="close">&times;</span></header>
          <div class="modal-content">
