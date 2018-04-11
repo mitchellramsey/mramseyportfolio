@@ -22,20 +22,6 @@ var projects = {
             demoLink: "https://mramsey1992.github.io/triviaGame/"
         },
         {
-            name: "Liri Node App",
-            description: "A back-end application that can retrieve tweets from Twitter, song information from Spotify, and movie information from the OMDB API. App is built utilizing Node.js",
-            image: "assets/images/placeholder1.jpg",
-            githubLink: "https://github.com/mramsey1992/liri-node-app",
-            demoLink: ""
-        },
-        {
-            name: "Bamazon",
-            description: "A back-end application that utilizes Node and MySQL. Users can utilize the app as a customer or a manager. Customers can purchase products and managers can update inventories.",
-            image: "assets/images/placeholder2.jpg",
-            githubLink: "https://github.com/mramsey1992/bamazon",
-            demoLink: ""
-        },
-        {
             name: "Friend Finder",
             description: "A back-end application that utilizes nodeJS, expressJS, and npm packages: path and body-parser. App users take a 10 question survey and are matched with the user that provided the most similar response.",
             image: "assets/images/friend-finder.PNG",
