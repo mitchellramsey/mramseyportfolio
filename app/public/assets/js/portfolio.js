@@ -34,6 +34,13 @@ var projects = {
             image: "assets/images/fantasybaseball.PNG",
             githubLink: "https://github.com/mramsey1992/fantasybaseball",
             demoLink: "https://nameless-gorge-13839.herokuapp.com/"
+        },
+        {
+            name: "MongoDB Scraper - Charlotte Observer Edition",
+            description: "A web app that will scrape Charlotte Observer articles. Users will be able to save articles and leave notes about the articles. This app is designed to demonstrate the uses of MongoDB. The app is a full stack app that utilizes MongoDB, Express, Node, Handlebars, Bootstrap and jQuery. MongoDB captures the title, link, and caption for all articles on the local news of the Charlotte Observer. Users are then able to save documents and leave comments. Comments would then post on the comment screen afterwards.",
+            image: "assets/images/mongodb-demo.PNG",
+            githubLink: "https://github.com/mramsey1992/mongodb_demo",
+            demoLink: "http://ramsey-mongodb-demo.herokuapp.com/"
         }
     ],
     slideshowCreator: function() {
