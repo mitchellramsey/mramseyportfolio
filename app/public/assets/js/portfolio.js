@@ -41,6 +41,13 @@ var projects = {
             image: "assets/images/mongodb-demo.PNG",
             githubLink: "https://github.com/mramsey1992/mongodb_demo",
             demoLink: "http://ramsey-mongodb-demo.herokuapp.com/"
+        },
+        {
+            name: "React Demo - Clicky Game",
+            description: "A clicky game that illustrates the many advanced features of React such as components, states, and props",
+            image: "assets/images/react-demo.PNG",
+            githubLink: "https://github.com/mramsey1992/react-demo",
+            demoLink: "http://ramsey-react-demo.herokuapp.com/"
         }
     ],
     slideshowCreator: function() {
