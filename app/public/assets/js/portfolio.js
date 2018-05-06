@@ -1,32 +1,18 @@
 var projects = {
     details: [
         {
-            name: "Hangman",
-            description: "Simple front-end hangman game utilizing Javascript concepts",
-            image: "assets/images/hangman.PNG",
-            githubLink: "https://github.com/mramsey1992/hangman-game",
-            demoLink: "https://mramsey1992.github.io/hangman-game/"
+            name: "Charlotte Disc-Golf",
+            description: "A full stack application that allows user to track their scores at disc golf courses while being provided information about the courses and respective holes. Users will create an account through their Google account, then can look up courses, play a new round of disc golf, or browse through their round history.",
+            image: "assets/images/charlottediscgolf.PNG",
+            githubLink: "https://github.com/mramsey1992/charlotte_discgolf",
+            demoLink: "https://stormy-scrubland-88373.herokuapp.com/"
         },
         {
-            name: "Crystal Collector",
-            description: "A front-end logic game that utilizes Javascript/jQuery for gameplay, app was built using Bootstrap",
-            image: "assets/images/crystal-collector.PNG",
-            githubLink: "https://github.com/mramsey1992/week-4-game",
-            demoLink: "https://mramsey1992.github.io/week-4-game/"
-        },
-        {
-            name: "Sports Trivia",
-            description: "A trivia game that utilizes Javascript/jQuery featuring concepts of Intervals and Timeouts",
-            image: "assets/images/sportsTrivia.PNG",
-            githubLink: "https://github.com/mramsey1992/triviaGame",
-            demoLink: "https://mramsey1992.github.io/triviaGame/"
-        },
-        {
-            name: "Friend Finder",
-            description: "A back-end application that utilizes nodeJS, expressJS, and npm packages: path and body-parser. App users take a 10 question survey and are matched with the user that provided the most similar response.",
-            image: "assets/images/friend-finder.PNG",
-            githubLink: "https://github.com/mramsey1992/friendFinder",
-            demoLink: "https://quiet-meadow-49757.herokuapp.com/"
+            name: "React Demo - Clicky Game",
+            description: "A clicky game that illustrates the many advanced features of React such as components, states, and props",
+            image: "assets/images/react-demo.PNG",
+            githubLink: "https://github.com/mramsey1992/react-demo",
+            demoLink: "http://ramsey-react-demo.herokuapp.com/"
         },
         {
             name: "Fantasy Baseball Draft Tracker",
@@ -43,11 +29,18 @@ var projects = {
             demoLink: "http://ramsey-mongodb-demo.herokuapp.com/"
         },
         {
-            name: "React Demo - Clicky Game",
-            description: "A clicky game that illustrates the many advanced features of React such as components, states, and props",
-            image: "assets/images/react-demo.PNG",
-            githubLink: "https://github.com/mramsey1992/react-demo",
-            demoLink: "http://ramsey-react-demo.herokuapp.com/"
+            name: "Friend Finder",
+            description: "A back-end application that utilizes nodeJS, expressJS, and npm packages: path and body-parser. App users take a 10 question survey and are matched with the user that provided the most similar response.",
+            image: "assets/images/friend-finder.PNG",
+            githubLink: "https://github.com/mramsey1992/friendFinder",
+            demoLink: "https://quiet-meadow-49757.herokuapp.com/"
+        },
+        {
+            name: "Sports Trivia",
+            description: "A trivia game that utilizes Javascript/jQuery featuring concepts of Intervals and Timeouts",
+            image: "assets/images/sportsTrivia.PNG",
+            githubLink: "https://github.com/mramsey1992/triviaGame",
+            demoLink: "https://mramsey1992.github.io/triviaGame/"
         }
     ],
     slideshowCreator: function() {
