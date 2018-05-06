@@ -11,16 +11,15 @@
     
 </head>
 <body>
-    <div class="navbar">
-        <div class="name-header">
-            <h1>Mitchell Ramsey</h1>
-        </div>
-        <div class="nav-links">
-                <h3><a class="pageLinks" href="#about-me">Contact Me</a></h3>
-                <h3><a class="pageLinks" href="#projects">Projects</a></h3>
-                <h3><a class="pageLinks" href="#contact-me">About Me</a></h3>
-        </div>
+
+    <div class="topnav" id="myTopnav">
+        <a href="#topnav">Mitchell Ramsey</a>
+        <a href="#about-me">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact-me">Contact Me</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="displayLinks()">&#9776;</a>
     </div>
+
     <div class="offset-body">
       <div class="welcome-sign">
           <h1 id="animate">Mitchell Ramsey's<br/>Web Development Portfolio</h1>
@@ -59,8 +58,6 @@
           <h2>Projects</h2>
           <hr>
           <div class="slideshow-container" id="display-project">
-
-
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
           </div>
@@ -75,58 +72,51 @@
           <h2>Contact Me</h2>
           <hr>
           <form name="htmlform" method="POST" action="send">
-                <table width="900px">
-                </tr>
-                <tr>
-                 <td>
-                  <label for="first_name">Name:</label>
-                 </td>
-                 <td>
-                  <input  id="input" type="text" name="name" maxlength="50" size="50">
-                 </td>
-                </tr>
-                 
-                <tr>
-                 <td>
-                  <label for="last_name">Company:</label>
-                 </td>
-                 <td>
-                  <input id="input"  type="text" name="company" maxlength="50" size="50">
-                 </td>
-                </tr>
-                <tr>
-                 <td>
-                  <label for="email">Email Address:</label>
-                 </td>
-                 <td>
-                  <input id="input"  type="text" name="email" maxlength="80" size="50">
-                 </td>
-                 
-                </tr>
-                <tr>
-                 <td>
-                  <label for="telephone">Telephone Number:</label>
-                 </td>
-                 <td>
-                  <input id="input"  type="text" name="telephone" maxlength="30" size="50">
-                 </td>
-                </tr>
-                <tr>
-                 <td>
-                  <label for="comments">Message: </label>
-                 </td>
-                 <td>
-                  <textarea id="input"  name="comments" maxlength="1000" cols="60" rows="6"></textarea>
-                 </td>
-                 
-                </tr>
-                <tr>
-                 <td colspan="10" style="text-align:center">
-                  <button id="submit" type="submit">Submit</button>   
-                 </td>
-                </tr>
-                </table>
-                </form>
+              <div class="row">
+                  <div class="label">
+                        <label for="name">Name:</label>
+                  </div>
+                  <div class="formInput">
+                        <input  id="input" type="text" name="name" maxlength="50">
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="label">
+                        <label for="last_name">Company:</label>
+                  </div>
+                  <div class="formInput">
+                        <input id="input"  type="text" name="company" maxlength="50" >
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="label">
+                    <label for="email">Email Address:</label>
+                  </div>
+                  <div class="formInput">
+                    <input id="input"  type="text" name="email" maxlength="80" >
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="label">
+                    <label for="telephone">Telephone Number:</label>
+                  </div>
+                  <div class="formInput">
+                    <input id="input"  type="text" name="telephone" maxlength="30">
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="label">
+                    <label for="comments">Message: </label>
+                  </div>
+                  <div class="formInput">
+                    <textarea id="input"  name="comments" maxlength="1000" cols="60" rows="6"></textarea>
+                  </div>
+              </div>
+              <div class="row" style="text-align: center;">
+                    <button id="submit" type="submit">Submit</button>  
+              </div>
+
+          </form>
       </div>
 
     </div>
