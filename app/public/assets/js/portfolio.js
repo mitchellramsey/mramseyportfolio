@@ -1,6 +1,13 @@
 var projects = {
     details: [
         {
+            name: "Mount Holly Youth League Portal",
+            description: "A ReactJS app that allows a community to create and assemble youth leagues. Parents can register kids, coaches can create practices, and administrators can create leagues, teams, and schedules",
+            image: "assets/images/mtholly-youthleague.PNG",
+            githubLink: "https://github.com/mramsey1992/mtholly-youthleagues-portal",
+            demoLink: "https://mtholly-youthleague-portal.herokuapp.com/"
+        },
+        {
             name: "Charlotte Disc-Golf",
             description: "A full stack application that allows user to track their scores at disc golf courses while being provided information about the courses and respective holes. Users will create an account through their Google account, then can look up courses, play a new round of disc golf, or browse through their round history.",
             image: "assets/images/charlottediscgolf.PNG",
@@ -34,13 +41,6 @@ var projects = {
             image: "assets/images/friend-finder.PNG",
             githubLink: "https://github.com/mramsey1992/friendFinder",
             demoLink: "https://quiet-meadow-49757.herokuapp.com/"
-        },
-        {
-            name: "Sports Trivia",
-            description: "A trivia game that utilizes Javascript/jQuery featuring concepts of Intervals and Timeouts",
-            image: "assets/images/sportsTrivia.PNG",
-            githubLink: "https://github.com/mramsey1992/triviaGame",
-            demoLink: "https://mramsey1992.github.io/triviaGame/"
         }
     ],
     slideshowCreator: function() {
