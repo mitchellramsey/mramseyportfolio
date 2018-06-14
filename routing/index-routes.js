@@ -25,7 +25,9 @@ app.post('/send', function(req,res) {
     
     if(name != "" && email != "", comments != "") {
         var transporter = nodemailer.createTransport({
-            service: 'gmail',
+            host: 'smtp.gmail.com',
+            port: 465,
+            secure: true,
             auth: {
                 type: "OAuth2",
                 user: keys.gmail.username,
