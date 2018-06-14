@@ -1,7 +1,11 @@
 //Dependencies
 //================================================
+require("dotenv").config();
+var keys = require("../key.js");
 var path = require("path");
-var db = require("../models");
+
+var nodemailer = require('nodemailer');
+
 
 //Routing
 //================================================
@@ -13,19 +17,52 @@ app.get("/", function(req,res) {
 });
 
 app.post('/send', function(req,res) {
-   var reply = req.body;
-//    console.log(db);
-//    console.log(db.Reply);
-   db.Reply.create({
-       name: reply.name,
-       company: reply.company,
-       email: reply.email,
-       telephone: reply.telephone,
-       message: reply.comments
-   }).then(function(result) {
-    res.redirect("/");
-   });
+   var { name, company, email, telephone, comments } = req.body;
 
+   //Setting Up NodeMailer
+    //===========================================================
+    
+    
+    if(name != "" && email != "", comments != "") {
+        var transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                type: "OAuth2",
+                user: keys.gmail.username,
+                password: keys.gmail.password,
+                clientId: keys.gmail.client_id,
+                clientSecret: keys.gmail.client_secret,
+                refreshToken: '1/XIewfzc2NiWEABh6raGoIt_GoKMD3VLlFHit6W6sYvs'
+            },
+            tls: {
+                rejectUnauthorized: false
+            }      
+        });
+
+        var mailOptions = {
+            from: `${name} <${email}>`,
+            to: 'mitchellramsey1992@gmail.com',
+            subject: 'Portfolio Response',
+            text: `Name: ${name}
+Email: ${email}
+Phone Number: ${telephone}
+Company: ${company}
+Comments: ${comments}`
+        };
+
+        transporter.sendMail(mailOptions, (err, info) => {
+            if(err) {
+                console.log(err);
+            } else {
+                console.log("The message was sent");
+                console.log(info);
+            }
+        })
+
+        res.redirect('/');
+    } else {
+        res.status(404).send("You must fill out the name, email, and comments fields in order to send a message");
+    }
  
 });
 

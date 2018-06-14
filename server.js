@@ -3,7 +3,9 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
-var db = require("./models");
+
+
+
 
 
 //Express Configuration
@@ -29,8 +31,7 @@ require("./routing/index-routes")(app);
 // app.use(express.static(path.join(__dirname, '/app/public/'))); 
 //Starts the server to begin listening
 //============================================================
-db.sequelize.sync().then(function() {
+
     app.listen(PORT, function() {
       console.log("App listening on PORT " + PORT);
     });
-});
