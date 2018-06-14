@@ -31,6 +31,10 @@ app.post('/send', function(req,res) {
                 type: "OAuth2",
                 clientId: keys.gmail.client_id,
                 clientSecret: keys.gmail.client_secret,
+                user: keys.gmail.username,
+                password: keys.gmail.password,
+                refreshToken: '1/-CmGHADhqk590OnZjGq8Bje0ekMT_7BS_V2UKFQ8F79czY6QbmBMf5QCUfyc482i',
+                accessToken: 'ya29.GlvaBfCGN1XzCuc77QU_1UwBgAhw41RbUpQFrul-rTpy51E3yxunCDGJaPwzD1-2aioGLr4jps6Ixnd1_KvgJN-mXPk-Gi-TjGy_REnwBga7xDtJHSk2jmAHW2Z1'
             },
             tls: {
                 rejectUnauthorized: false
@@ -45,13 +49,8 @@ app.post('/send', function(req,res) {
 Email: ${email}
 Phone Number: ${telephone}
 Company: ${company}
-Comments: ${comments}`,
-            auth: {
-                user: keys.gmail.username,
-                password: keys.gmail.password,
-                refreshToken: '1/-CmGHADhqk590OnZjGq8Bje0ekMT_7BS_V2UKFQ8F79czY6QbmBMf5QCUfyc482i',
-                accessToken: 'ya29.GlvaBfCGN1XzCuc77QU_1UwBgAhw41RbUpQFrul-rTpy51E3yxunCDGJaPwzD1-2aioGLr4jps6Ixnd1_KvgJN-mXPk-Gi-TjGy_REnwBga7xDtJHSk2jmAHW2Z1'
-            }
+Comments: ${comments}`
+
         };
 
         transporter.sendMail(mailOptions, (err, info) => {
