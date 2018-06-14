@@ -3,7 +3,6 @@
 require("dotenv").config();
 var keys = require("../key.js");
 var path = require("path");
-
 var nodemailer = require('nodemailer');
 
 
@@ -27,6 +26,8 @@ app.post('/send', function(req,res) {
             host: 'smtp.gmail.com',
             port: 465,
             secure: true,
+            ssl: true,
+            use_authentication: true,
             auth: {
                 type: "OAuth2",
                 clientId: keys.gmail.client_id,
